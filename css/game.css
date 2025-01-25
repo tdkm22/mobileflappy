@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Orbitron", sans-serif;
+	text-decoration: none;
+}
+
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('../images/background-img.gif') repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bird {
+	height: 160px !important;
+	width: 145px !important;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+.bird img{
+	object-fit: contain;
+}
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:url("../images/pipe.png") no-repeat center center;
+	background-size: cover;
+	border-radius: 5px;
+}
+
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 3em;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#volume-control {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+	z-index: 11;
+}
+
+#volume-control label {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+#volume-slider {
+    width: 100px;
+}
+
+#mute-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+@keyframes score-bump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.score_val {
+	color: gold;
+	font-weight: bold;
+	animation: score-bump 0.5s;
+}
+@media only screen and (max-width: 1080px) {
+    .message{
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score{
+		font-size: 8vh;
+	}
+	.bird{
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite{
+		width: 14vw;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+    .message {
+        font-size: 30px;
+        top: 50%;
+        white-space: nowrap;
+    }
+    .score {
+        font-size: 6vh;
+    }
+    .bird {
+        width: 80px;
+        height: 60px;
+        left: 20vw;
+    }
+    .pipe_sprite {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .message {
+        font-size: 20px;
+    }
+    .score {
+        font-size: 4vh;
+    }
+    .bird {
+        width: 80px;
+        height: 80px;
+        left: 15vw;
+    }
+    .pipe_sprite {
+        width: 25vw;
+    }
+}
+.profile-info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 0.7em;
+	color: #000;
+	border-bottom: 1px solid #000;
+	margin-bottom: 20px;
+
+}
+
+.message {
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 30%;
+	left: 50%;
+	font-size: 2em;
+	transform: translate(-50%, -50%);
+	justify-content: center;
+	text-align: center;
+	
+	
+}
+.messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 11px;
+}
+.logoutButton{
+	background-color: #e67e22;
+	border: 2px solid #000;
+	border-radius: 11px;
+	width: 100px;
+	align-items: center;
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px;
+	color: #fff;
+	z-index: 10;
+}
+.logoutButton:hover{
+background-color: #ba671e;
+
+}
+
+.card-container {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.character-card {
+	width: 120px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: #f9f9f9;
+	text-align: center;
+}
+
+.character-card img {
+	max-width: 80px;
+	max-height: 80px;
+	object-fit: contain;
+}
+
+.character-card p {
+	margin: 0;
+	font-size: 14px;
+	font-weight: bold;
+}

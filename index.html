@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/game.css">
+
+    <title>Ruyui</title>
+</head>
+<body>
+   
+
+<div class="background"></div> 
+<img src="images/Bird.gif" alt="bird-img" class="bird" id="bird-1">
+<div class="message">
+    <div>
+        <p style="color: purple; margin-bottom: 20px;">Choose your character</p>
+    </div>
+    <div class="card-container">
+        <div class="character-card" data-character="Voxel">
+            <img src="images/Voxel.gif" alt="Voxel">
+            <p>Voxel</p>
+        </div>
+        <div class="character-card" data-character="Yan">
+            <img src="images/Yan.gif" alt="Yan">
+            <p>Yan</p>
+        </div>
+        <div class="character-card" data-character="Bharat">
+            <img src="images/Bharat.gif" alt="Bharat">
+            <p>Bharat</p>
+        </div>
+        <div class="character-card" data-character="Doug">
+            <img src="images/Doug.gif" alt="Doug">
+            <p>Doug</p>
+        </div>
+        <div class="character-card" data-character="Elton">
+            <img src="images/Elton.gif" alt="Elton">
+            <p>Elton</p>
+        </div>
+    </div>
+    <h4 style="margin-top: 15px">How to play?</h4>
+    <div style="align-items: center; text-align: center; display: flex; margin-top: 10px;">
+        <img src="images/enterButton.png" width="100" class="enterButton"> <span>To Start Game </span>
+    </div>
+    <div style="align-items: center; text-align: center; display: flex;">
+        <img src="images/space.png" width="100" class="enterButton"><span> To Fly</span>
+    </div>
+</div>
+
+
+    <div class="score">
+        <span class="score_title"></span>
+        <span class="score_val"></span>
+</div>
+<div id="volume-control">
+    <label for="volume-slider">Volume: </label>
+    <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.3">
+    <button id="mute-button">🔊</button>
+</div>
+    <script src="js/script.js" defer=""></script>
+
+
+
+
+
+</body></html>
